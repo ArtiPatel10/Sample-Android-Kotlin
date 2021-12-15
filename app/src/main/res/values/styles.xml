@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ListTitleStyle">
+        <item name="android:textSize">@dimen/sp18</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">@dimen/dp10</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="CustomCardViewStyle" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay_card_custom_corners</item>
+        <item name="cardElevation">@dimen/dp0</item>
+    </style>
+
+
+    <style name="ShapeAppearanceOverlay_card_custom_corners" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="strokeWidth">@dimen/dp0</item>
+        <item name="cardElevation">@dimen/dp0</item>
+        <item name="cornerSizeTopRight">@dimen/dp15</item>
+        <item name="cornerSizeTopLeft">@dimen/dp0</item>
+        <item name="cornerSizeBottomRight">@dimen/dp5</item>
+        <item name="cornerSizeBottomLeft">@dimen/dp0</item>
+    </style>
+
+
+    <style name="CustomGymCardViewStyle" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="cardElevation">@dimen/dp0</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay_gym_card_custom_corners
+        </item>
+    </style>
+
+
+    <style name="ShapeAppearanceOverlay_gym_card_custom_corners" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cardElevation">@dimen/dp0</item>
+        <item name="strokeWidth">@dimen/dp0</item>
+        <item name="cornerSizeTopRight">@dimen/dp15</item>
+        <item name="cornerSizeTopLeft">@dimen/dp15</item>
+        <item name="cornerSizeBottomRight">@dimen/dp0</item>
+        <item name="cornerSizeBottomLeft">@dimen/dp0</item>
+    </style>
+</resources>

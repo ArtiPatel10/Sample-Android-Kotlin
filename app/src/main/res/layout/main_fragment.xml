@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F7"
+    tools:context=".ui.main.MainFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/blue"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivDumbell"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginLeft="@dimen/dp10"
+            android:src="@drawable/ic_dumbbell"
+            android:tint="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="UseAppTint" />
+
+        <ImageView
+            android:id="@+id/ivChat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp10"
+            android:src="@drawable/ic_map"
+            android:tint="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/ivDumbell"
+            app:layout_constraintEnd_toStartOf="@id/ivSearch"
+            app:layout_constraintTop_toTopOf="@id/ivDumbell"
+            tools:ignore="UseAppTint" />
+
+        <ImageView
+            android:id="@+id/ivSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp10"
+            android:src="@drawable/ic_search"
+            android:tint="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/ivDumbell"
+            app:layout_constraintEnd_toStartOf="@id/cvProfile"
+            app:layout_constraintTop_toTopOf="@id/ivDumbell"
+            tools:ignore="UseAppTint" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvProfile"
+            android:layout_width="@dimen/dp30"
+            android:layout_height="@dimen/dp30"
+            android:layout_marginEnd="@dimen/dp10"
+            android:layout_marginRight="@dimen/dp5"
+            android:padding="@dimen/dp10"
+            app:cardCornerRadius="@dimen/dp15"
+            app:layout_constraintBottom_toBottomOf="@id/ivDumbell"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ivDumbell">
+
+            <ImageView
+                android:id="@+id/ivNotification"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_baseline_person_outline_24" />
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clToolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvRecommendedGyms"
+                style="@style/ListTitleStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/recommended_gyms"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvGym"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp5"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvRecommendedGyms"
+                tools:listitem="@layout/item_qyms" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPopularClasses"
+                style="@style/ListTitleStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/popular_classes"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rvGym" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvActivities"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvPopularClasses"
+                tools:listitem="@layout/item_activity" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvClasses"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:orientation="vertical"
+                android:overScrollMode="never"
+                android:paddingBottom="@dimen/dp10"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rvActivities"
+                tools:listitem="@layout/item_class" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

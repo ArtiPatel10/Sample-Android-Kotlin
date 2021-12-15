@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Sample App</string>
+    <string name="recommended_gyms">Recommended Gyms</string>
+    <string name="day">/day</string>
+    <string name="popular_classes">Popular Classes</string>
+    <string name="gym_seven">Gym "Seven"</string>
+    <string name="no_image_found">No image found</string>
+</resources>

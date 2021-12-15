@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cvMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="@dimen/dp10"
+    android:layout_marginLeft="@dimen/dp10"
+    android:layout_marginRight="@dimen/dp10"
+    android:layout_marginBottom="@dimen/dp10">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/dp2"
+        app:cardCornerRadius="@dimen/dp10"
+        app:cardElevation="@dimen/dp2"
+        tools:targetApi="lollipop">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivMap"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvNoImage"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:text="@string/no_image_found"
+                app:layout_constraintBottom_toTopOf="@id/tvGymName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.4"
+                app:layout_constraintStart_toStartOf="parent" />
+            <ImageView
+                android:id="@+id/ivGym"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toTopOf="@id/tvGymName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.4"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+            <ImageView
+                android:id="@+id/ivFavourite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp10"
+                android:src="@drawable/selector_favourite"
+                app:layout_constraintEnd_toEndOf="@id/ivGym"
+                app:layout_constraintTop_toTopOf="@id/ivGym"
+                app:tint="@color/white" />
+
+            <ImageView
+                android:id="@+id/ivReview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp10"
+                android:layout_marginLeft="@dimen/dp10"
+                android:paddingBottom="@dimen/dp5"
+                android:src="@drawable/ic_baseline_star_rate_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvGymName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/dp5"
+                android:text="Gym Rabel"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp16"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/ivReview"
+                app:layout_constraintTop_toTopOf="@id/tvGymPrice" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvGymPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$25"
+                android:textColor="@color/light_blue"
+                android:textSize="@dimen/sp18"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toTopOf="@id/tvGymPriceFor"
+                app:layout_constraintEnd_toEndOf="@id/tvGymTime" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvGymPriceFor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/dp5"
+                android:text="@string/day"
+                android:textSize="@dimen/sp12"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toTopOf="@id/tvGymTime"
+                app:layout_constraintEnd_toEndOf="@id/tvGymTime" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvReviewValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/dp5"
+                android:text="5.5"
+                android:textSize="@dimen/sp14"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/ivReview"
+                app:layout_constraintStart_toEndOf="@id/ivReview"
+                app:layout_constraintTop_toTopOf="@id/ivReview" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvGymTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp10"
+                android:layout_marginEnd="@dimen/dp10"
+                android:gravity="end"
+                android:paddingBottom="@dimen/dp5"
+                android:text="01 Aug - 30 Aug, 2020"
+                android:textSize="@dimen/sp13"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="@id/ivReview"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvReviewValue" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

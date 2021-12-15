@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/dp10"
+    app:cardCornerRadius="@dimen/dp15"
+    android:layout_marginTop="@dimen/dp5"
+    android:layout_marginRight="@dimen/dp10"
+    android:layout_marginBottom="@dimen/dp10"
+    app:cardElevation="@dimen/dp2"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/mcvClassImage"
+            app:shapeAppearance="@style/CustomCardViewStyle"
+            android:layout_width="@dimen/dp110"
+            android:layout_height="@dimen/dp130"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivClassImage"
+                android:adjustViewBounds="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <ImageView
+            android:id="@+id/ivFavourite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/dp5"
+            android:padding="@dimen/dp10"
+            android:src="@drawable/selector_favourite"
+            app:layout_constraintEnd_toEndOf="@id/mcvClassImage"
+            app:layout_constraintTop_toTopOf="@id/mcvClassImage"
+            tools:targetApi="lollipop" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvClassName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginLeft="@dimen/dp5"
+            android:layout_marginTop="@dimen/dp5"
+            android:paddingBottom="@dimen/dp5"
+            android:text="Fitness Class"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp16"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tvGymPrice"
+            app:layout_constraintStart_toEndOf="@id/mcvClassImage"
+            app:layout_constraintTop_toTopOf="@id/mcvClassImage" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvGymPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp10"
+            android:layout_marginRight="@dimen/dp10"
+            android:text="$25"
+            android:textColor="@color/light_blue"
+            android:textSize="@dimen/sp18"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvClassName" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvClassPriceFor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/day"
+            android:textSize="@dimen/sp12"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="@id/tvGymPrice"
+            app:layout_constraintTop_toBottomOf="@id/tvGymPrice" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvGymType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp10"
+            android:text="@string/gym_seven"
+            android:textSize="@dimen/sp14"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toTopOf="@id/tvLocation"
+            app:layout_constraintStart_toStartOf="@id/tvClassName"
+            app:layout_constraintTop_toBottomOf="@id/tvClassPriceFor" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLocation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp10"
+            android:layout_marginRight="@dimen/dp10"
+            android:layout_marginBottom="@dimen/dp5"
+            android:drawableStart="@drawable/ic_location"
+            android:drawableLeft="@drawable/ic_location"
+            android:drawableTint="@color/teal_200"
+            android:text="01 Aug - 30 Aug, 2020"
+            android:textSize="@dimen/sp13"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toTopOf="@id/tvTime"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvClassName"
+            tools:targetApi="m" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp10"
+            android:layout_marginRight="@dimen/dp10"
+            android:layout_marginBottom="@dimen/dp5"
+            android:drawableStart="@drawable/ic_watch"
+            android:drawableLeft="@drawable/ic_watch"
+            android:drawableTint="@color/teal_200"
+            android:text="1 hr 25 min"
+            android:textSize="@dimen/sp13"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="@id/mcvClassImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvClassName"
+            tools:targetApi="m" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

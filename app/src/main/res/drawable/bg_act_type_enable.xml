@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+
+        <shape android:shape="oval">
+            <solid android:color="@color/blue" />
+            <!--<stroke
+                android:width="@dimen/dp1"
+                android:color="@color/colorWhite" />-->
+        </shape>
+    </item>
+
+    <!--  <item
+          android:bottom="10dp"
+          android:left="10dp"
+          android:right="10dp"
+          android:top="10dp">
+
+          <shape android:shape="oval">
+
+              <stroke
+                  android:width="5dp"
+                  android:color="#ff0000" />
+          </shape>
+      </item>-->
+    <!-- <item
+         android:drawable="@drawable/ic_act_alpine_ski_disable"
+         android:bottom="@dimen/dp5"
+         android:left="@dimen/dp5"
+         android:right="@dimen/dp5"
+         android:top="@dimen/dp5"/>-->
+</layer-list>
