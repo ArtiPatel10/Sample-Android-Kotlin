@@ -1,2 +1,2 @@
-rootProject.name = "TestTask-Lyudmila"
+rootProject.name = "Sample-Android-Kotlin"
 include ':app'
